@@ -1,0 +1,44 @@
+{
+    "name": "pie/vvv-init-wpengine",
+    "description": "An auto-site setup for VVV",
+    "homepage": "https://github.com/pie/vvv-init-wpengine",
+    "authors": [
+        {
+            "name": "PIE",
+            "homepage": "http://pie.co.de"
+        }
+    ],
+    "type": "project",
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://wpackagist.org"
+        }
+    ],
+    "config": {
+        "vendor-dir": "public_html/wp-content/vendor"
+    },
+    "require": {
+        "php": ">=5.3.2",
+        "johnpbloch/wordpress": "4.*",
+        "wpackagist-theme/twentyfifteen": "@stable"
+    },
+    "require-dev": {
+        "wpackagist-plugin/user-switching": "*",
+        "wpackagist-plugin/theme-check": "*",
+        "wpackagist-plugin/query-monitor": "*",
+        "wpackagist-plugin/debug-bar": "*"
+    },
+    "extra": {
+        "wordpress-install-dir": "public_html/wp/",
+        "installer-paths": {
+            "public_html/wp-content/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+            "public_html/wp-content/themes/{$name}/": [
+                "type:wordpress-theme"
+            ]
+        }
+    }
+}
